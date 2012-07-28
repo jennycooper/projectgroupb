@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li class="left-border"><a href ="index.html">Home</a></li>
+				<li><a href ="spring.html">Spring</a></li>
+				<li><a href ="summer.html">Summer</a></li>
+				<li><a href ="autumn.html">Autumn</a></li>
+				<li id="selected"><a href ="winter.html">Winter</a></li>
+				<li><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="seasons-backgr">
+				<img id ="seasons-backgr-img" src="images/ashford_castle.jpg" alt="ashford castle image" />
+				<div class="logobackground"> <!--logo is on top of an opaque backgorund-->
+				</div>
+				<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+				<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="sidebar">
+
+			<p class="sidebar_title"> Locations On The Map:</p>
+			<div id="map"></div>
+
+			<!-- div for holding the accordion tabs and the hidden text they display on mouse over-->
+			<div id="accordion_menu">
+				<p class= "sidebar_title"> Other Places At A Glance </p>
+					 	<div id="accordion">
+					 		<h2 class="current">Spring</h2>
+					 		<div class="pane" style="display:block">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li1">
+					 			<a href="spring.html">
+								Blarney Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li2">
+								<a href="spring.html">
+								Cruising on the Shannon
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li3">
+					 			<a href="spring.html">
+								National Heritage Park
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li4">
+								<a href="spring.html">
+								Christchurch
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Summer</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li5">
+					 			<a href="summer.html">
+								Cliffs of Moher
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li6">
+								<a href="summer.html">
+								The Burren
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li7">
+					 			<a href="summer.html">
+								Benbulben
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li8">
+								<a href="summer.html">
+								Aran Islands
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Autumn</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li9">
+					 			<a href="autumn.html">
+								Powerscourt
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li10">
+								<a href="autumn.html">
+								Clonmacnoise
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li11">
+					 			<a href="autumn.html">
+								Glendalough
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li12">
+								<a href="autumn.html">
+								Trinity College
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<!--The 'Winter' pane is not displayed on this tab-->
+					 		<h2 style="display:none" >Winter</h2>
+					 		<div class="pane" style="display:none" >
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li13">
+					 			<a href="winter.html">
+								Bunratty Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li14">
+								<a href="winter.html">
+								Guinness Brewery
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li15">
+					 			<a href="winter.html">
+								Newgrange
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li16">
+								<a href="winter.html">
+								Titanic Exhibition
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 	</div> <!-- End of accordion tabs Div -->
+
+						<div id="hidden_background" style="display:none;">
+					 	</div><!-- End of hidden_background Div -->
+
+					 	<div id="hiddentext" style="display:none;">
+							<div id="hiddenHdr" >ggg </div>
+							<img  src="images/thumbnails/blarney_castle.jpg" id ="hiddenImg" alt = "blarney castle image"/>
+							<p id="hiddenInfo"> </p>
+						</div> <!-- End of hidden text Div -->
+			</div> <!-- End of accordion menu Div -->
+
+			<p class= "sidebar_title"> Local Tourist Offices: </p>
+			<div class ="info_section">
+				<div class="info">
+					<h4>Bunratty Castle:</h4>
+					<p>Clare Information Office</p>
+					<p>tel:(06)57081171, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Guinness Brewery:</h4>
+					<p>Dublin Tourist Information</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Newgrange:</h4>
+					<p>Newgrange Visitor Centre</p>
+					<p>tel:(07)19161201, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Titanic Exhibition:</h4>
+					<p>Cobh Tourist Information</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+			</div>
+
+		</div> <!-- End of sidebar Div -->
+
+		<div class="maincol">
+			<div class="seasontext"> <span class="maincolheader"><img src="images/winter_icon.png" alt="snowflake icon"/>Ireland in Winter </span><br/>
+				<p>Ireland enjoys mild temperatures in the Winter, and although it can rain, there are plenty of indoor sights still to visit regardless of weather.
+				Catch a medieval experience at Bunratty Castle, enjoy a fresh pint of guinness on a tour of the Guinness Brewery, visit the Titanic Exhibition
+				at the ship's last port of call in Cobh, and don't miss out on the winter solstice at the megalithic tomb at Newgrange.
+				</p>
+			</div>
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/bunratty_castle.jpg" alt="Bunratty Castle picture" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"> <span class="maincolheader">Bunratty Castle and Folk Park </span><br/><br/>
+				A visit to County Clare should always include a trip to Bunratty Castle and the adjoining Folk Park.
+				The castle, built in 1425, was restored in 1954 to its former medieval splendour and houses the Bunratty Collection: 450 pieces of
+				medieval furniture and artifacts. <br/>
+				At night time the castle is the impressive setting for its popular medieval banquets, held year round.
+				</p>
+				<a href="#" id="example-show" class="showLink"
+				onclick="showHide('example');return false;">See more.</a>
+				<div id="example" class="more">
+					<p>Within the grounds is the folk park, where 19th-century life is vividly recreated. Set on 26 acres, the impressive park features over
+					30 buildings, including a schoolhouse, post office and doctors house in a living village setting. <br/><br/>
+					Bunratty Folk Park also includes Ardcroney Church, a former Church of Ireland building which was painstakingly moved, stone
+					by stone, from County Tipperary to Bunratty.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/bunratty-castle-and-folk-park/73313" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example-hide" class="hideLink"
+					onclick="showHide('example');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/guinness.jpg" alt="Guinness brewery image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Guinness Brewery </span><br/><br/>
+				The Guinness Storehouse is located in the heart of the St James's Gate Brewery in the centre of Dublin, which has been home to the 'black stuff' since 1759.<br/>
+				The highlight for many visitors is the Gravity Bar, where they collect their end of tour pint of Guinness and can relax and enjoy
+				the 360 degree views across Dublin City.
+				</p>
+				<a href="#" id="example2-show" class="showLink"
+				onclick="showHide('example2');return false;">See more.</a>
+				<div id="example2" class="more">
+					<p>The seven storey building, a former Guinness fermentation plant, has been remodelled into the shape of a giant pint of Guinness.<br/><br/>
+					A visit will teach you everything you ever wanted to know about this world famous beer, from how Guinness is made, to the ancient craft of Guinness
+					barrel making in the cooperage and on to the creation of the world famous brand.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/guinness-storehouse/30482" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example2-hide" class="hideLink"
+					onclick="showHide('example2');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/newgrange.jpg" alt="Newgrange image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Newgrange </span><br/><br/>
+				All admissions to Newgrange and Knowth are through the Bru na Boinne Visitor Centre, in Donore, County Meath. The Megalithic Passage Tomb at Newgrange was built about 3200 BC.
+				The 19 metre long inner passage leads to a cruciform chamber with a corbelled roof.
+				There is a roof-box opening to allow sunlight to penetrate the passage and chamber at sunrise around the Winter Solstice.
+				</p>
+				<a href="#" id="example3-show" class="showLink"
+				onclick="showHide('example3');return false;">See more.</a>
+				<div id="example3" class="more">
+					<p>The passage and chamber of Newgrange are illuminated by the winter solstice sunrise. A shaft of sunlight shines through the roof box over the
+					entrance and penetrates the passage to light up the chamber. The dramatic event lasts for 17 minutes at dawn on the Winter Solstice and for a few
+					mornings either side of the Winter Solstice.<br/><br/>
+					The visitor centre also has an exhibition that includes a full scale replica of the chamber at the World Heritage Site of Newgrange,
+					as well as a full model of one of the smaller tombs at Knowth.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/bru-na-boinne-visitor-centre-newgrange-and-knowth/12303" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example3-hide" class="hideLink"
+					onclick="showHide('example3');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/titanic_exhibition.jpg" alt="Titanic Exhibition image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Titanic Exhibition </span><br/><br/>
+				The story of the Titanic has captured the hearts and minds of millions. From descendents
+				of crew and passengers, to the just plain fascinated, the story has been re-told over and over from Belfast to Hollywood.
+				The Titanic Experience Cobh exhibition is housed in the original White Star Line building in Cobh, the site where the last 123 passengers boarded the Titanic.
+				</p>
+				<a href="#" id="example4-show" class="showLink"
+				onclick="showHide('example4');return false;">See more.</a>
+				<div id="example4" class="more">
+					<p>The aim of the Titanic Experience Cobh is to bring to life the experience on board to share the highs and lows of an early 20th
+					century luxury cruise liner through clever set designs, audio visual aids and interactive exhibits. <br/><br/>
+					There have been many stories told on the Titanic and the fate of its passengers, this exhibition will focus on the last 123 who boarded at Cobh (then known as Queenstown),
+					highlighting the intimate Irish connection to this legendary story.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/titanic-experience-cobh/88023" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example4-hide" class="hideLink"
+					onclick="showHide('example4');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+		</div> <!-- End of maincol div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="gallery">
+			<p class="sidebar_title"> See More Pictures: </p>
+			<div id="main_pic" class="shadow">
+				<img id="image-1" src="images/bunratty_castle.jpg" class="opaque" alt = "bunratty"/>
+				<img id="image-2" src="images/gallery/bunratty2.jpg" alt = "bunratty"/>
+				<img id="image-3" src="images/gallery/bunratty3.jpg" alt = "bunratty" />
+				<img id="image-4" src="images/gallery/bunratty4.jpg" alt = "bunratty"/>
+				<img id="image-5" src="images/guinness.jpg" alt = "guinness"/>
+				<img id="image-6" src="images/gallery/guinness2.jpg" alt = "guinness"/>
+				<img id="image-7" src="images/gallery/guinness3.jpg" alt = "guinness"/>
+				<img id="image-8" src="images/gallery/guinness4.jpg" alt = "guinness"/>
+				<img id="image-9" src="images/newgrange.jpg" alt = "newgrange"/>
+				<img id="image-10" src="images/gallery/newgrange2.jpg" alt = "newgrange"/>
+				<img id="image-11" src="images/gallery/newgrange3.jpg" alt = "newgrange"/>
+				<img id="image-12" src="images/gallery/newgrange4.jpg" alt = "newgrange"/>
+				<img id="image-13" src="images/titanic_exhibition.jpg" alt = "titanic_exhibition"/>
+				<img id="image-14" src="images/gallery/titanic2.jpg" alt = "titanic_exhibition"/>
+				<img id="image-15" src="images/gallery/titanic3.jpg" alt = "titanic_exhibition"/>
+				<img id="image-16" src="images/gallery/titanic4.jpg" alt = "titanic_exhibition"/>
+			</div>
+			<p class="gallery_p">Bunratty Castle</p>
+			<p class="thumbnails">
+				<span class="selected" id="for-image-1"><img src="images/bunratty_castle.jpg" alt = "powerscourt"/></span>
+				<span id="for-image-2"><img src="images/gallery/bunratty2.jpg" alt = "bunratty"/></span>
+				<span id="for-image-3"><img src="images/gallery/bunratty3.jpg" alt = "bunratty"/></span>
+				<span id="for-image-4"><img src="images/gallery/bunratty4.jpg" alt = "bunratty"/></span>
+			</p>
+			<p class="gallery_p">Guinness Brewery</p>
+			<p class="thumbnails">
+				<span id="for-image-5"><img src="images/guinness.jpg" alt = "guinness"/></span>
+				<span id="for-image-6"><img src="images/gallery/guinness2.jpg" alt = "guinness"/></span>
+				<span id="for-image-7"><img src="images/gallery/guinness3.jpg" alt = "guinness"/></span>
+				<span id="for-image-8"><img src="images/gallery/guinness4.jpg" alt = "guinness"/></span>
+			</p>
+			<p class="gallery_p">Newgrange</p>
+			<p class="thumbnails">
+			<span id="for-image-9"><img src="images/newgrange.jpg" alt = "newgrange"/></span>
+			<span id="for-image-10"><img src="images/gallery/newgrange2.jpg" alt = "newgrange"/></span>
+			<span id="for-image-11"><img src="images/gallery/newgrange3.jpg" alt = "newgrange"/></span>
+			<span id="for-image-12"><img src="images/gallery/newgrange4.jpg" alt = "newgrange"/></span>
+			</p>
+			<p class="gallery_p">Titanic Exhibition</p>
+			<p class="thumbnails">
+			<span id="for-image-13"><img src="images/titanic_exhibition.jpg" alt = "trinity"/></span>
+			<span id="for-image-14"><img src="images/gallery/titanic2.jpg" alt = "titanic_exhibition"/></span>
+			<span id="for-image-15"><img src="images/gallery/titanic3.jpg" alt = "titanic_exhibition"/></span>
+			<span id="for-image-16"><img src="images/gallery/titanic4.jpg" alt = "titanic_exhibition"/></span>
+			</p>
+		</div><!-- End of gallery Div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+window.onload = initWinter();
+
+
+</script>
+
+
+</body>
+
+</html>

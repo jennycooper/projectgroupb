@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li class="left-border"><a href ="index.html">Home</a></li>
+				<li><a href ="spring.html">Spring</a></li>
+				<li id="selected"><a href ="summer.html">Summer</a></li>
+				<li><a href ="autumn.html">Autumn</a></li>
+				<li><a href ="winter.html">Winter</a></li>
+				<li><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="seasons-backgr">
+				<img id ="seasons-backgr-img" src="images/burren_banner.jpg" alt="The Burren image" />
+				<div class="logobackground"> <!--logo is on top of an opaque backgorund-->
+				</div>
+				<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+				<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="sidebar">
+
+			<p class="sidebar_title"> Locations On The Map:</p>
+			<div id="map"></div>
+
+			<!-- div for holding the accordion tabs and the hidden text they display on mouse over-->
+			<div id="accordion_menu">
+				<p class= "sidebar_title"> Other Seasons At A Glance </p>
+					 	<div id="accordion">
+					 		<h2 class="current">Spring</h2>
+					 		<div class="pane" style="display:block">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li1">
+					 			<a href="spring.html">
+								Blarney Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li2">
+								<a href="spring.html">
+								Cruising on the Shannon
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li3">
+					 			<a href="spring.html">
+								National Heritage Park
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li4">
+								<a href="spring.html">
+								Christchurch
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+							<!--The 'Summer' pane is not displayed on this page-->
+					 		<h2 style='display:none'>Summer</h2>
+					 		<div class="pane" style= 'display:none'>
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li5">
+					 			<a href="summer.html">
+								Cliffs of Moher
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li6">
+								<a href="summer.html">
+								The Burren
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li7">
+					 			<a href="summer.html">
+								Benbulben
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li8">
+								<a href="summer.html">
+								Aran Islands
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Autumn</h2>
+							<div class="pane">
+								<ul>
+								<li class="acc_tabs" id="accordion_li9">
+								<a href="autumn.html">
+								Powerscourt House
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li10">
+								<a href="autumn.html">
+								Clonmacnoise
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li11">
+								<a href="autumn.html">
+								Glendalough
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li12">
+								<a href="autumn.html">
+								Trinity College
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Winter</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li13">
+					 			<a href="winter.html">
+								Bunratty Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li14">
+								<a href="winter.html">
+								Guinness Brewery
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li15">
+					 			<a href="winter.html">
+								Newgrange
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li16">
+								<a href="winter.html">
+								Titanic Exhibition
+								</a>
+								</li>
+								</ul>
+					 		</div>
+					 	</div> <!-- End of accordion tabs Div -->
+
+						<!--The following background and text are hidden until a mouseover event from the accordion_li items-->
+						<div id="hidden_background" style="display:none;">
+						</div><!-- End of hidden_background Div -->
+
+						<div id="hiddentext" style="display:none;">
+							<div id="hiddenHdr" >ggg </div>
+							<img  src="images/thumbnails/blarney_castle.jpg" id ="hiddenImg" alt = "blarney castle image"/>
+							<p id="hiddenInfo"> </p>
+						</div> <!-- End of hidden text Div -->
+			</div> <!-- End of accordion menu Div -->
+
+			<p class= "sidebar_title"> Local Tourist Offices: </p>
+			<div class ="info_section">
+				<div class="info">
+					<h4>Cliffs of Moher:</h4>
+					<p>Cliffs Of Moher Information Office</p>
+					<p>tel:(06)57081171, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>The Burren:</h4>
+					<p>Clare Dicsover Ireland Centre</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>benbulben:</h4>
+					<p>Sligo Tourist Office</p>
+					<p>tel:(07)19161201, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Aran Islands:</h4>
+					<p>Aran Islands Tourist Information</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+			</div>
+
+		</div> <!-- End of sidebar Div -->
+
+		<div class="maincol">
+			<div class="seasontext"> <span class="maincolheader"><img src="images/summer_icon.png" alt="flower icon"/>Ireland in Summer </span><br/>
+				<p>With evening stretching to as late as 10.30pm, summer days give tourists plenty of time to absorb the amazing scenery Ireland has to offer.
+				Touring around the west coast is best done during the summer months, as the atlantic coast gets the worst of the rain and winds during the other seasons.
+				Stop along the way to see the Cliffs of Moher, The Burren, Benbulben Mountains and the Aran Islands.
+				</p>
+			</div>
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/cliffs_of_moher.jpg" alt="cliffs of moher picture" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"> <span class="maincolheader">Cliffs of Moher </span><br/><br/>
+				The Cliffs of Moher, one of Ireland's top visitor attractions, loom high over County Clare's west coast.
+				Standing 214m at their highest point, the cliffs stretch for 8km along the Atlantic coastline.<br/>
+				This iconic location attracts close to one million visitors per year. The unusual, underground
+				Visitor Centre also houses the exciting Atlantic Edge display.</p>
+				<a href="#" id="example-show" class="showLink"
+				onclick="showHide('example');return false;">See more.</a>
+				<div id="example" class="more">
+					<p>From the cliffs, one can see the Aran Islands, Galway Bay, The Twelve Bens, the Maam Turk Mountains
+					in Connemara and Loop Head to the south. O'Brien's Tower, another of Ireland's most-photographed landmarks,
+					guards one prominent headland of these majestic cliffs.<br/><br/>
+					The Centre also provides a gift shop, (stocking official Cliffs of Moher products, maps, guides, books and DVDs),
+					visitor information and an accommodation booking service.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Activities-Adventure/cliffs-of-moher-visitor-experience/16222" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example-hide" class="hideLink"
+					onclick="showHide('example');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/burren.jpg" alt="The Burren image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">The Burren </span><br/><br/>
+				The Burren in County Clare is a karstic plateau - a stony chaos to the casual observer - with a full assemblage of the
+				curious landforms that characterise such limestone landscapes. It is one of the largest karst landscapes in Europe<br/>
+				The region encompasses 360 km2 of gently inclined plateau with a further 200 km2 of lowland to the east of the plateau.
+				</p>
+				<a href="#" id="example2-show" class="showLink"
+				onclick="showHide('example2');return false;">See more.</a>
+				<div id="example2" class="more">
+					<p>The limestone also has a landscape in miniature etched into exposed slabs of rock. The bare surfaces (pavements)
+					are fretted with hollows and channels where acidic rainwater has selectively dissolved the rock. An extreme example of
+					these micro landforms occurs on the coast.<br/><br/>
+					More than 700 different flowering plants and ferns have been recorded in the Burren. Thus, although the Burren represents
+					only 1% of the land-mass of Ireland, 75% of the Irish native species are contained in the area.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Activities-Adventure/the-burren/16228" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example2-hide" class="hideLink"
+					onclick="showHide('example2');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/benbulben.jpg" alt="Benbulben image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Benbulben Mountain </span><br/><br/>
+				Benbulben is known as County Sligo's 'Table Mountain' and is part of the Dartry Mountains. Benbulben was formed as a
+				result of the different responses to erosion of the limestone and shale of which the mountain is formed.
+				A hard and resistant limestone forms the upper cliffs and precipices. Benbulben was formed during the Ice age,
+				when large parts of the Earth were under glaciers.</p>
+				<a href="#" id="example3-show" class="showLink"
+				onclick="showHide('example3');return false;">See more.</a>
+				<div id="example3" class="more">
+					<p> It was originally merely a large ridge, however the moving glaciers cut into the earth, leaving a distinct
+					formation, now called Benbulben.<br/><br/>
+					The steeper sides of Benbulben are composed of large amounts of Dartry limestone on top of smaller amounts of Glencar limestone.
+					The smoother sides are composed of Benbulben shale.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/benbulben/87761" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example3-hide" class="hideLink"
+					onclick="showHide('example3');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/aran_islands.jpg" alt="Aran Islands image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Aran Islands </span><br/><br/>
+				In Galway Bay lie three rocky limestone outcrops that make up the Aran Islands. They are a bastion of traditional language, culture and music,
+				unique in their geology and archaeology and unrivalled in their potent sense of history.<br/>
+				The pace of life is slow here and a profound sense of peace accompanies any walk or cycle down the narrow grassy lanes.
+				</p>
+				<a href="#" id="example4-show" class="showLink"
+				onclick="showHide('example4');return false;">See more.</a>
+				<div id="example4" class="more">
+					<p>Each of the three islands, Inis Mor, Inis Meain and Inis Oirr have their own distinct atmosphere and character, but the dramatic
+					landscapes and endless sea form a backdrop to a labyrinth of meandering stone walls and tiny, tightly packed fields. In between, a network
+					of narrow winding roads and grassy lanes sweep from pristine beaches and craggy shores to the dizzying cliffs that mark the edge of Europe.<br/><br/>
+					The islands have lured legions of writers, artists and visitors over the centuries, their enigmatic ancient monuments, early Christian remains, holy
+					wells and historic lighthouses adding to their sense of timelessness and mystery.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/the-aran-islands/62115" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example4-hide" class="hideLink"
+					onclick="showHide('example4');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+		</div> <!-- End of maincol div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="gallery">
+			<p class="sidebar_title"> See More Pictures: </p>
+			<div id="main_pic" class="shadow">
+				<img id="image-1" src="images/cliffs_of_moher.jpg" class="opaque" alt = "cliffs of moher"/>
+				<img id="image-2" src="images/gallery/cliffs_of_moher2.jpg" alt = "cliffs of moher"/>
+				<img id="image-3" src="images/gallery/cliffs_of_moher3.jpg" alt = "cliffs of moher" />
+				<img id="image-4" src="images/gallery/cliffs_of_moher4.jpg" alt = "cliffs of moher"/>
+				<img id="image-5" src="images/burren.jpg" alt = "The Burren"/>
+				<img id="image-6" src="images/gallery/burren2.jpg" alt = "The Burren"/>
+				<img id="image-7" src="images/gallery/burren3.jpg" alt = "The Burren"/>
+				<img id="image-8" src="images/gallery/burren4.jpg" alt = "The Burren"/>
+				<img id="image-9" src="images/benbulben.jpg" alt = "benbulben"/>
+				<img id="image-10" src="images/gallery/benbulben2.jpg" alt = "benbulben"/>
+				<img id="image-11" src="images/gallery/benbulben3.jpg" alt = "benbulben"/>
+				<img id="image-12" src="images/gallery/benbulben4.jpg" alt = "benbulben"/>
+				<img id="image-13" src="images/aran_islands.jpg" alt = "aran islands"/>
+				<img id="image-14" src="images/gallery/aran_islands2.jpg" alt = "aran islands"/>
+				<img id="image-15" src="images/gallery/aran_islands3.jpg" alt = "aran islands"/>
+				<img id="image-16" src="images/gallery/aran_islands4.jpg" alt = "aran islands"/>
+			</div>
+			<p class="gallery_p">Cliffs Of Moher</p>
+			<p class="thumbnails">
+				<span class="selected" id="for-image-1"><img src="images/cliffs_of_moher.jpg" alt = "cliffs of moher"/></span>
+				<span id="for-image-2"><img src="images/gallery/cliffs_of_moher2.jpg" alt = "cliffs of moher"/></span>
+				<span id="for-image-3"><img src="images/gallery/cliffs_of_moher3.jpg" alt = "cliffs of moher"/></span>
+				<span id="for-image-4"><img src="images/gallery/cliffs_of_moher4.jpg" alt = "cliffs of moher"/></span>
+			</p>
+			<p class="gallery_p">The Burren</p>
+			<p class="thumbnails">
+				<span id="for-image-5"><img src="images/burren.jpg" alt = "The Burren"/></span>
+				<span id="for-image-6"><img src="images/gallery/burren2.jpg" alt = "The Burren"/></span>
+				<span id="for-image-7"><img src="images/gallery/burren3.jpg" alt = "The Burren"/></span>
+				<span id="for-image-8"><img src="images/gallery/burren4.jpg" alt = "The Burren"/></span>
+			</p>
+			<p class="gallery_p">Benbulben Mountain</p>
+			<p class="thumbnails">
+			<span id="for-image-9"><img src="images/benbulben.jpg" alt = "benbulben"/></span>
+			<span id="for-image-10"><img src="images/gallery/benbulben2.jpg" alt = "benbulben"/></span>
+			<span id="for-image-11"><img src="images/gallery/benbulben3.jpg" alt = "benbulben"/></span>
+			<span id="for-image-12"><img src="images/gallery/benbulben4.jpg" alt = "benbulben"/></span>
+			</p>
+			<p class="gallery_p">Aran Islands</p>
+			<p class="thumbnails">
+			<span id="for-image-13"><img src="images/aran_islands.jpg" alt = "aran islands"/></span>
+			<span id="for-image-14"><img src="images/gallery/aran_islands2.jpg" alt = "aran islands"/></span>
+			<span id="for-image-15"><img src="images/gallery/aran_islands3.jpg" alt = "aran islands"/></span>
+			<span id="for-image-16"><img src="images/gallery/aran_islands4.jpg" alt = "aran islands"/></span>
+			</p>
+		</div><!-- End of gallery Div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+window.onload = initSummer();
+
+</script>
+
+
+</body>
+
+</html>

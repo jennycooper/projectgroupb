@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li class="left-border"><a href ="index.html">Home</a></li>
+				<li><a href ="spring.html">Spring</a></li>
+				<li><a href ="summer.html">Summer</a></li>
+				<li id="selected"><a href ="autumn.html">Autumn</a></li>
+				<li><a href ="winter.html">Winter</a></li>
+				<li><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="seasons-backgr">
+				<img id ="seasons-backgr-img" src="images/clonmacnoise_banner.jpg" alt="clonmacnoise image" />
+				<div class="logobackground"> <!--logo is on top of an opaque backgorund-->
+				</div>
+				<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+				<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="sidebar">
+			<p class="sidebar_title"> Locations On The Map:</p>
+			<div id="map"></div>
+
+			<!-- div for holding the accordion tabs and the hidden text they display on mouse over-->
+			<div id="accordion_menu">
+				<p class= "sidebar_title"> Other Places At A Glance </p>
+					 	<div id="accordion">
+					 		<h2 class="current">Spring</h2>
+					 		<div class="pane" style="display:block">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li1">
+					 			<a href="spring.html">
+								Blarney Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li2">
+								<a href="spring.html">
+								Cruising on the Shannon
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li3">
+					 			<a href="spring.html">
+								National Heritage Park
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li4">
+								<a href="spring.html">
+								Christchurch
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Summer</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li5">
+					 			<a href="summer.html">
+								Cliffs of Moher
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li6">
+								<a href="summer.html">
+								The Burren
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li7">
+					 			<a href="summer.html">
+								Benbulben
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li8">
+								<a href="summer.html">
+								Aran Islands
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<!--The 'Autumn" pane is not displayed on this page-->
+					 		<h2 style= 'display:none'>Autumn</h2>
+							<div class="pane" style= 'display:none'>
+								<ul>
+								<li class="acc_tabs" id="accordion_li9">
+								<a href="autumn.html">
+								Powerscourt
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li10">
+								<a href="autumn.html">
+								Clonmacnoise
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li11">
+								<a href="autumn.html">
+								Glendalough
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li12">
+								<a href="autumn.html">
+								Trinity College
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Winter</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li13">
+					 			<a href="winter.html">
+								Bunratty Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li14">
+								<a href="winter.html">
+								Guinness Brewery
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li15">
+					 			<a href="winter.html">
+								Newgrange
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li16">
+								<a href="winter.html">
+								Titanic Exhibition
+								</a>
+								</li>
+								</ul>
+					 		</div>
+					 	</div> <!-- End of accordion tabs Div -->
+
+						<!--The following background and text are hidden until a mouseover event from the accordion_li items-->
+						<div id="hidden_background" style="display:none;">
+						</div><!-- End of hidden_background Div -->
+
+						<div id="hiddentext" style="display:none;">
+							<div id="hiddenHdr" >ggg </div>
+							<img  src="images/thumbnails/blarney_castle.jpg" id ="hiddenImg" alt = "blarney castle image"/>
+							<p id="hiddenInfo"> </p>
+						</div> <!-- End of hidden text Div -->
+			</div> <!-- End of accordion menu Div -->
+
+			<p class= "sidebar_title"> Local Tourist Offices: </p>
+			<div class ="info_section">
+				<div class="info">
+				<h4>Powerscourt House and Gardens:</h4>
+					<p>Wicklow Information Office</p>
+					<p>tel:(06)57081171, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Clonmacnoise:</h4>
+					<p>Roscommon Information Centre</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Glendalough:</h4>
+					<p>Glendalough Visitor Centre</p>
+					<p>tel:(07)19161201, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Trinity College:</h4>
+					<p>Dublin Tourist Information</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+			</div>
+
+		</div> <!-- End of sidebar Div -->
+
+		<div class="maincol">
+			<div class="seasontext"> <span class="maincolheader"><img src="images/autumn_icon.png" alt="brown leaf icon"/>Ireland in Autumn </span><br/>
+				<p>Take a break from the summer crowds and enjoy some of the busier sights without the crowds. Long stretches in
+				the evenings make autumn the perfect outdoor season. Take a walk in the spectacular scenery of Powersourt Gardens,
+				visit the historic sights at Clonmacnoise, take advantage of the quieter walks through stunning Glendalough, or stroll through Trinity College.
+				</p>
+			</div>
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/powerscourt_gardens.jpg" alt="powerscourt picture" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"> <span class="maincolheader">Powerscourt House and Gardens </span><br/><br/>
+				Powerscourt is one of Europe's great treasures and Ireland's most famous estates. Gracing the Wicklow Mountains, 20km from Dublin
+				city centre, Powerscourt is a heritage property with a surprising difference and a great family attraction. <br/>
+				Powerscourt House now features a beautiful Terrace Cafe where Avoca serves up delectable cuisine.
+				</p>
+				<a href="#" id="example-show" class="showLink"
+				onclick="showHide('example');return false;">See more.</a>
+				<div id="example" class="more">
+					<p>Powerscourt offers visitors a sublime blend of formal gardens, sweeping terraces, statues and ornamental lakes with secret
+					hollows, rambling walks and beautiful walled gardens. The winding pathways feel like a secret garden at times, revealing new
+					treasures such as fountains from Paris, gates from Venice and statues from Rome. There are hundreds of different types of plants,
+					flowers and trees in the Gardens. <br/><br/>
+					Powerscourt House was once a beautiful Palladian mansion, home to Lord Powerscourt and his family for over 350 years. Sadly the
+					house was destroyed by fire in the 1970s but was renovated, although not to its former glory.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/powerscourt-house-and-gardens/12251" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example-hide" class="hideLink"
+					onclick="showHide('example');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/clonmacnoise.jpg" alt="Clonmacnoise image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Clonmacnoise </span><br/><br/>
+				Clonmacnoise is an ancient monastic site near Shannonbridge, County Offaly. It was founded by St Ciaran in the mid-6th century
+				and over the years, it was a great centre of learning. <br/>Many manuscripts, including the 11th-century Annals of Tighernach and the
+				12th-century Book of the Dun Cow, were written here by the monks and scholars of the time.
+				</p>
+				<a href="#" id="example2-show" class="showLink"
+				onclick="showHide('example2');return false;">See more.</a>
+				<div id="example2" class="more">
+					<p>Today, visitors can see three high crosses, a cathedral, seven churches and two round towers. They will also pass through the visitor centre,
+					which displays a number of cross-slabs and the 9th-century Cross of the Scriptures.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/clonmacnoise/16281" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example2-hide" class="hideLink"
+					onclick="showHide('example2');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/glendalough.jpg" alt="Glendalough image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Glendalough </span><br/><br/>
+				The early Christian Monastic site of Glendalough, in County Wicklow, was founded by St Kevin in the 6th century.
+				Set in a glaciated valley with two lakes, the monastic remains include a superb round tower, stone churches and decorated crosses.<br/>
+				There are beautiful walks through the valley of different difficulty levels, with easier walks and around the lakes.
+				</p>
+				<a href="#" id="example3-show" class="showLink"
+				onclick="showHide('example3');return false;">See more.</a>
+				<div id="example3" class="more">
+					<p> The Visitor Centre, which is also within the National Park, has an interesting exhibition and an audio-visual show. Maps, guides and
+					information on the area's cultural and natural heritage is available to visitors at the Visitor Centre. <br/><br/>
+					Wicklow Mountains National Park, which covers much of upland County Wicklow, contains an area of approximately 20,000 hectares. This includes large areas of
+					mountain blanket bogs, including the Lugnaquilla and Liffey Head Bog complexes and Glendalough Wood Nature Reserve.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/wicklow-mountains-national-park/9809" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example3-hide" class="hideLink"
+					onclick="showHide('example3');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/trinity.jpg" alt="Trinity College image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Trinity College </span><br/><br/>
+				Trinity College, right in the heart of Dublin centre, has the largest library in Ireland, dating back to the establishment of the college in 1592. Today it has 5 million printed volumes with
+				extensive collections of journals, manuscripts, maps and music reflecting more than 400 years of academic development.
+				The most famous of its manuscripts, the Book of Kells and the Book of Durrow, were presented by Henry Jones, Bishop of Meath.
+				</p>
+				<a href="#" id="example4-show" class="showLink"
+				onclick="showHide('example4');return false;">See more.</a>
+				<div id="example4" class="more">
+					<p>The library was endowed with legal deposit privilege in 1801 and continues to receive copies of material published in the United Kingdom and Ireland.<br/><br/>
+					The library supports the learning and research needs across all disciplines of Trinity College; it is a major research library of international repute; it
+					provides services to a wide range of external users and institutions; it contributes to the development of creative initiatives in information provision and
+					its exhibitions of manuscripts and other treasures attracts hundreds of thousands of visitors to visit the Old Library each year.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/trinity-college-library/31275" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example4-hide" class="hideLink"
+					onclick="showHide('example4');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+		</div> <!-- End of maincol div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="gallery">
+			<p class="sidebar_title"> See More Pictures: </p>
+			<div id="main_pic" class="shadow">
+				<img id="image-1" src="images/powerscourt_gardens.jpg" class="opaque" alt = "powerscourt gardens"/>
+				<img id="image-2" src="images/gallery/powerscourt2.jpg" alt = "powerscourt"/>
+				<img id="image-3" src="images/gallery/powerscourt3.jpg" alt = "powerscourt" />
+				<img id="image-4" src="images/gallery/powerscourt4.jpg" alt = "powerscourt"/>
+				<img id="image-5" src="images/clonmacnoise.jpg" alt = "clonmacnoise"/>
+				<img id="image-6" src="images/gallery/clonmacnoise2.jpg" alt = "clonmacnoise"/>
+				<img id="image-7" src="images/gallery/clonmacnoise3.jpg" alt = "clonmacnoise"/>
+				<img id="image-8" src="images/gallery/clonmacnoise4.jpg" alt = "clonmacnoise"/>
+				<img id="image-9" src="images/glendalough.jpg" alt = "glendalough"/>
+				<img id="image-10" src="images/gallery/glendalough2.jpg" alt = "glendalough"/>
+				<img id="image-11" src="images/gallery/glendalough3.jpg" alt = "glendalough"/>
+				<img id="image-12" src="images/gallery/glendalough4.jpg" alt = "glendalough"/>
+				<img id="image-13" src="images/trinity.jpg" alt = "aran islands"/>
+				<img id="image-14" src="images/gallery/trinity2.jpg" alt = "trinity college"/>
+				<img id="image-15" src="images/gallery/trinity3.jpg" alt = "trinity college"/>
+				<img id="image-16" src="images/gallery/trinity4.jpg" alt = "trinity college"/>
+			</div>
+			<p class="gallery_p">Powerscourt Gardens</p>
+			<p class="thumbnails">
+				<span class="selected" id="for-image-1"><img src="images/powerscourt_gardens.jpg" alt = "powerscourt"/></span>
+				<span id="for-image-2"><img src="images/gallery/powerscourt2.jpg" alt = "powerscourt"/></span>
+				<span id="for-image-3"><img src="images/gallery/powerscourt3.jpg" alt = "powerscourt"/></span>
+				<span id="for-image-4"><img src="images/gallery/powerscourt4.jpg" alt = "powerscourt"/></span>
+			</p>
+			<p class="gallery_p">Clonmacnoise</p>
+			<p class="thumbnails">
+				<span id="for-image-5"><img src="images/clonmacnoise.jpg" alt = "clonmacnoise"/></span>
+				<span id="for-image-6"><img src="images/gallery/clonmacnoise2.jpg" alt = "clonmacnoise"/></span>
+				<span id="for-image-7"><img src="images/gallery/clonmacnoise3.jpg" alt = "clonmacnoise"/></span>
+				<span id="for-image-8"><img src="images/gallery/clonmacnoise4.jpg" alt = "clonmacnoise"/></span>
+			</p>
+			<p class="gallery_p">Glendalough</p>
+			<p class="thumbnails">
+			<span id="for-image-9"><img src="images/glendalough.jpg" alt = "glendalough"/></span>
+			<span id="for-image-10"><img src="images/gallery/glendalough2.jpg" alt = "glendalough"/></span>
+			<span id="for-image-11"><img src="images/gallery/glendalough3.jpg" alt = "glendalough"/></span>
+			<span id="for-image-12"><img src="images/gallery/glendalough4.jpg" alt = "glendalough"/></span>
+			</p>
+			<p class="gallery_p">Trinity College</p>
+			<p class="thumbnails">
+			<span id="for-image-13"><img src="images/trinity.jpg" alt = "trinity"/></span>
+			<span id="for-image-14"><img src="images/gallery/trinity2.jpg" alt = "trinity"/></span>
+			<span id="for-image-15"><img src="images/gallery/trinity3.jpg" alt = "trinity"/></span>
+			<span id="for-image-16"><img src="images/gallery/trinity4.jpg" alt = "trinity"/></span>
+			</p>
+		</div><!-- End of gallery Div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+window.onload = initAutumn();
+
+</script>
+
+
+</body>
+
+</html>

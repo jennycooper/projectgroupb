@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript">
+	</script>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li id="selected"><a href ="index.html">Home</a></li>
+				<li><a href ="spring.html">Spring</a></li>
+				<li><a href ="summer.html">Summer</a></li>
+				<li><a href ="autumn.html">Autumn</a></li>
+				<li><a href ="winter.html">Winter</a></li>
+				<li><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div  class="row">
+		<div id="seasons-backgr">
+			<img id="seasons-backgr-img" src="images/killarney_banner.jpg" alt="Killarney photo"/>
+			<div class="logobackground">
+			</div> <!--logo is on top of an opaque backgorund-->
+			<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+			<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="mainseasoninfo">
+			<div class="socialmedia">
+				<a href='#'><img src="images/facebook_icon.jpg" alt = "facebook icon"/></a>
+				<a href='#'><img src="images/twitter_icon.jpg" alt = "twitter icon"/></a>
+				<a href='#'><img src="images/rss_icon.jpg" alt = "rss icon"/></a>
+				<a href='#'><img src="images/youtube_icon.jpg" alt = "you tube icon"/></a>
+				<a href='#'>Sign up for free to our newsletter</a>
+				<a href='#'>Download a Map of Ireland here</a>
+			</div>
+			<div class="maincoltext">
+				<span class="maincolheader">Discover Ireland At Any Time Of Year! </span><br/><br/>
+				<p>Ireland has much to offer to tourists at all times of the year, regardless of the season.<br/>
+				Spring has the start of the longer days with less crowds, Summer is the ideal time to catch the
+				breathtaking scenery, Autumn has plenty of warm sunny days, and Winter has plenty of cozy pubs,
+				crowd-free historic sights, and great accommodation deals.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="minor">
+				<div id='Tabs'>
+					<p class="sidebar_title">Average temp and rainfall:</p>
+					<ul>
+						<li id='li_tab1' onclick="tab('tab1')" class = "active"><a>Spring</a></li>
+						<li id='li_tab2' onclick="tab('tab2')"><a>Summer</a></li>
+						<li id='li_tab3' onclick="tab('tab3')"><a>Autumn</a></li>
+						<li id='li_tab4' onclick="tab('tab4')"><a>Winter</a></li>
+					</ul>
+					<div id='Content_Area'>
+						<div id='tab1'>
+							<p><b>Spring - March, April and May</b></p>
+							<p>Average temp and rainfall:</p>
+							<img src="images/av_temp_spring.jpg" alt="average temp in spring" />
+						</div>
+						<!--The following 3 tabs are initially not displayed until they are clicked on-->
+						<div id='tab2' style='display: none;'>
+							<p><b>Summer - June, July and Aug</b></p>
+							<p>Average temp and rainfall:</p>
+							<img src="images/av_temp_summer.jpg" alt="average temp in summer" />
+						</div>
+
+						<div id='tab3' style='display: none;'>
+							<p><b>Autumn - Sept, Oct and Nov</b></p>
+							<p>Average rainfall for Autumn</p>
+							<img src="images/av_temp_autumn.jpg" alt="average autumn in spring" />
+						</div>
+
+						<div id='tab4' style='display: none;'>
+							<p><b>Winter - Dec, Jan and Feb</b></p>
+							<p>Average rainfall for Winter</p>
+							<img src="images/av_temp_winter.jpg" alt="average temp in winter" />
+						</div>
+					</div> <!-- End of Content_Area Div -->
+				</div> <!-- End of Tabs Div -->
+
+				<p class="sidebar_title">Highlights of Ireland Video:</p>
+				<div id="video">
+					<iframe width="250" height="220" src="http://www.youtube.com/embed/o6kXT3oipyQ" ></iframe>
+				</div>
+		</div><!-- End of Minor Div -->
+
+		<div class="seasoninfo">
+		<div class="seasoninfo2">
+			<a  href="summer.html"><img class="seasonimg" src="images/benbulben.jpg" alt="Benbulben Mountain picture" /></a>
+			<p class="sectionShadow">
+			<a  href="summer.html"><img src="images/summer_button.jpg" alt="link to summer page" /></a>
+			With evening stretching to as late as 10.30pm, summer days give tourists plenty of time to absorb the amazing scenery Ireland has to offer.<br/>
+			Touring around the west coast is best insummer months, as the atlantic coast gets the worst of the rain
+			and winds during the other seasons. Stop along the way to see the Cliffs of Moher, The Burren, Benbulben and
+			the Aran Islands.
+			</p>
+			<hr class="maincolhr"/>
+			<a href="winter.html"><img class="seasonimg" src="images/newgrange.jpg" alt="Newgrange picture" /></a>
+			<p class="sectionShadow">
+			<a  href="winter.html"><img src="images/winter_button.jpg" alt="link to winter page" /></a>
+			Ireland enjoys mild temperatures in the Winter, and although it can rain, there are plenty of indoor sights still to visit regardless of weather.<br/> Catch a medieval
+			experience at Bunratty Castle, enjoy a fresh pint of guinness on a tour of the Guinness Brewery, visit the Titanic Exhibition at the ship's
+			last port of call in Cobh, and don't miss out on the winter solstice at the megalithic tomb at Newgrange.
+			</p>
+		</div>
+
+		<div class="seasoninfo1">
+			<a href="spring.html"><img class="seasonimg" src="images/blarney_castle.jpg" alt="Blarney Castle picture" /></a>
+			<p class="sectionShadow">
+			<a  href="spring.html"><img src="images/spring_button.jpg" alt="link to spring page" /></a>
+			Take advantage of this slightly quiter period to enjoy some of the highlights Ireland has to offer, without having to queue during
+			the busy summer crowds.<br/>Kiss the Blarney Stone, enjoy a peaceful cruise on the Shannon while it is not congested with boats, take a
+			historic trip to the National Heritage Park to see crannogs, and enjoy the beauty of Christ Church Cathedral and its viking display.
+			</p>
+			<hr class="maincolhr"/>
+			<a href="autumn.html"><img class="seasonimg" src="images/glendalough.jpg" alt="Glendalough Tower picture" /></a>
+			<p class="sectionShadow">
+			<a  href="autumn.html"><img src="images/autumn_button.jpg" alt="link to autumn page" /></a>
+			Take a break from the summer crowds and enjoy some of the busier sights without the crowds. Long stretches in the evenings
+			make autumn the perfect outdoor season.<br/> Take a walk in the spectacular scenery of Powersourt Gardens, visit the historic
+			sights at Clonmacnoise, take advantage of the quieter walks through stunning Glendalough, or stroll through Trinity College.
+			</p>
+		</div>
+		</div><!-- End of seasoninfo Div -->
+	</div> <!-- End of Row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+window.onload = initIndex();
+</script>
+
+
+</body>
+
+</html>

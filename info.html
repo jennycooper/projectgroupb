@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<!--Navigation-->
+
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li class="left-border"><a href ="index.html">Home</a></li>
+				<li><a href ="spring.html">Spring</a></li>
+				<li><a href ="summer.html">Summer</a></li>
+				<li><a href ="autumn.html">Autumn</a></li>
+				<li><a href ="winter.html">Winter</a></li>
+				<li id="selected"><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+<!--Top photo and logo-->
+
+	<div class="row">
+		<div id="seasons-backgr">
+				<img id='seasons-backgr-img' src="images/express-train-banner.jpeg" alt="train image" />
+				<div class="logobackground"> <!--logo is on top of an opaque backgorund-->
+				</div>
+				<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+				<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="fullcolumn">
+			<h2>CONTACT US AND OTHER INFO</h2>
+			<p> We placed here some practical information about Ireland, how to get around and FAQ.
+			Below are links to our favourite annual events in the country.<br/> We also placed a little form where you
+			can drop a line if you would like to share with us an opinion about travelling in Ireland or any other subject.
+				</p>
+		</div>
+
+	</div>
+
+	<hr class="info-hr"/>
+
+	<div class="row">
+
+		<div class="fullcolumn">
+
+			<p class="placeinfotext"> <span class="maincolheader">Contact Form </span><br/>
+			Have a question about travel in Ireland? Would you like to share your impressions
+			with others? Or do you just have a random question to ask? Just use the form below!
+			<br/></p>
+			</div>
+
+<!--Contact us form-->
+
+			<div class="halfcolumn">
+			<form id="infoForm1" name="InfoForm" method="post" action="mailto:fake.name@google.com"
+			onsubmit="return validate();">
+				<p class="formpargraph">
+				<label for="name">Your Name</label>
+				<input name="your-name" type="text" size="40" id="name"/>
+				</p>
+				<p class="formpargraph">
+				<label for="email">Your Email</label>
+				<input name="your-email" type="text" size="40" id="email"/>
+				</p>
+				<p class="formpargraph">
+				<label for="message">Your Message</label>
+				<textarea name="your-text" rows="5" cols="46" id="message"></textarea>
+				</p>
+				<p>
+				<input class="button" type="submit" value="Send"/>
+				<input class="button" type="reset"/>
+				</p>
+			</form>
+			</div>
+
+			<div class="halfcolumn">
+
+			<h4>FAQs:<br/></h4>
+
+			<p><i>When is the best time to come to Ireland?</i>
+			<a href="#" id="q1-show" class="showLink"
+				onclick="showHide('q1');return false;">Read</a></p>
+
+				<div id="q1" class="more">
+
+			<p class="answers">The summer months constitute the main tourist season in Ireland.
+			July and August are particularly busy. This is also the time when the weather
+			tends to be at its best. Hotels and accommodation in Ireland during this period
+			can be expensive, although there are more affordable Irish hotels available
+			for those willing to shop around. Cheap hotels are easier to find during
+			the off-peak seasons, for instance in the autumn and spring.
+			<a href="#" id="q1-hide" class="hideLink"
+					onclick="showHide('q1');return false;">Hide</a></p>
+				</div>
+
+			<p><i>Is tipping a custom in Ireland?</i>
+			<a href="#" id="q2-show" class="showLink"
+				onclick="showHide('q2');return false;">Read</a></p>
+
+				<div id="q2" class="more">
+
+			<p class="answers">Tipping is not ingrained in the Irish culture, and so is normally up to the
+			discretion of the visitor. The minimum wage for workers in Ireland is quite high
+			so tipping is not that customary. The most likely places that one may tip are
+			in hairdressers, taxis, restaurants and in Irish hotels. 10-15% is sufficient,
+			but in all cases, one should only tip if the service has been good!
+			<a href="#" id="q2-hide" class="hideLink"
+					onclick="showHide('q2');return false;">Hide</a></p>
+				</div>
+
+			<p><i>Will I need a passport and/or visa to enter Ireland?</i>
+			<a href="#" id="q3-show" class="showLink"
+				onclick="showHide('q3');return false;">Read</a></p>
+
+
+				<div id="q3" class="more">
+
+			<p class="answers">A passport or national identity card is the only documentation needed by citizens of
+			the other EU member states to enter Ireland. Citizens from non-EU states must have
+			a passport but not a visa for a short-term trip to Ireland.
+			Travellers from the United States, Canada, Australia and New Zealand are
+			not required to have a visa to enter the country. Citizens of a number of
+			countries from the Middle East, Africa and Central and Eastern Europe are required
+			to hold visas in order to enter Ireland. For further information, you should refer
+			to the Irish Department of Foreign Affairs in Dublin.
+			<a href="#" id="q3-hide" class="hideLink"
+					onclick="showHide('q3');return false;">Hide</a></p>
+				</div>
+
+			<p><i>What are the business hours in Ireland?</i>
+			<a href="#" id="q4-show" class="showLink"
+				onclick="showHide('q4');return false;">Read</a></p>
+
+				<div id="q4" class="more">
+
+					<p class="answers">
+						Most stores and shopping centres open from 9-6, Monday to Friday,
+						with late night shopping on Thursday evenings, normally until 9pm.
+						There is selective opening on Sundays, though Sunday trading is increasing
+						in both popularity and availability. There are a number of local convenience stores
+						that open from 8-11, some even later.<br/><br/>
+
+						Banks open from 10-4 from Monday to Friday.<br/><br/>
+
+						Bars and pubs have had their opening hours curtailed in the last years.
+						Bars open from 10.30am to 11.30pm between Monday and Thursday.
+						On Friday and Saturday evenings, last orders are at 12.30am. On Sundays,
+						closing time is 11.30pm. The majority of nightclubs serve alcohol until 1.30am,
+						and close at 2.30pm. There are some exceptions to this, mainly in Dublin city.
+
+					<a href="#" id="q4-hide" class="hideLink"
+					onclick="showHide('q4');return false;">Hide</a></p>
+				</div>
+
+	<p><i>What should you pack for a travel in Ireland?</i>
+			<a href="#" id="q5-show" class="showLink"
+				onclick="showHide('q5');return false;">Read</a></p>
+
+				<div id="q5" class="more">
+
+					<p class="answers">
+					Pack sweaters, comfortable clothes, and perhaps a rain poncho and/or umbrella.
+					The best way to stay warm is to dress in layers.  When the sun blasts through a
+					grey sky, you want to peel off that sweater and soak up the sun wearing a t-shirt.
+					If you’re hiking, pack shoes you’ve worn for a while.  This is no time for sore feet!
+					If you’re going to a spa destination, casual but classy is always a safe bet.
+					Be yourself and wear what makes you comfortable.  Ireland is a casual country.
+
+					<a href="#" id="q5-hide" class="hideLink"
+					onclick="showHide('q5');return false;">Hide</a></p>
+				</div>
+
+	<p><i>Is Ireland safe?</i>
+			<a href="#" id="q6-show" class="showLink"
+				onclick="showHide('q6');return false;">Read</a></p>
+
+				<div id="q6" class="more">
+
+					<p class="answers">
+					Ireland is most likely the safest country in Europe.  As in any large city,
+					you should be aware of your surroundings in some parts of Dublin, especially at night.
+					Violent crimes in Ireland against tourists are so rare as to be almost non-existent.
+
+					<a href="#" id="q6-hide" class="hideLink"
+					onclick="showHide('q6');return false;">Hide</a></p>
+				</div>
+
+	<p><i>Where can I smoke in Ireland?</i>
+			<a href="#" id="q7-show" class="showLink"
+				onclick="showHide('q7');return false;">Read</a></p>
+
+				<div id="q7" class="more">
+
+					<p class="answers">
+					Smoking is no longer permitted in public places.  This comes as a great relief to
+					many visitors who are accustomed to this practice at home. It gives you many more options,
+					particularly spending late nights at pubs.  And all are smoke-free!
+
+					<a href="#" id="q7-hide" class="hideLink"
+					onclick="showHide('q7');return false;">Hide</a></p>
+				</div>
+
+			</div>
+
+	</div><!-- End of row Div -->
+
+<hr class="info-hr"/>
+
+		<div class="row">
+
+		<div class="halfcolumn">
+
+<!--Festivals listing part-->
+
+			<p class="halfcoltext">Festivals and Events<br/></p>
+			<p>Festivals in Ireland are a large part of the culture. The chance to have a celebration
+			'no matter what the cause' is always welcomed, and as a result, visitors to the island will
+			be sure to find there is always something going on.<br/>
+			Selection of the most popular is listed below. For more extensive list you
+			can refer to <a href="http://www.discoverireland.ie/Whats-On/" onclick="OpenPopup(this.href); return false">
+			www.discoverireland.ie/Whats-On</a>.
+			</p>
+			<div>
+			<p class="eventstitle" id="springevents">Spring</p>
+				<table class="event-table">
+					<tr class="springt">
+					<td class="first">St. Patrick's Festival</td>
+					<td>15 - 18 March 2013</td>
+					<td><a class="details" href="http://www.stpatricksfestival.ie/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+					<tr class="springt">
+					<td class="first">The Cat Laughs Comedy Festival</td>
+					<td>May 2013</td>
+					<td><a class="details" href="http://www.thecatlaughs.com/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+			</tr>
+				</table>
+			</div>
+
+			<div>
+			<p class="eventstitle" id="summerevents">Summer</p>
+				<table class="event-table">
+					<tr class="summert">
+					<td class="first">Galway Races - Summer Festival</td>
+					<td>30 July - <br/>05 August 2012</td>
+					<td><a class="details" href="http://www.galwayraces.com/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+					<tr class="summert">
+					<td class="first">Puck Fair</td>
+					<td>10 - 12 August 2012</td>
+					<td><a class="details" href="http://www.puckfair.ie/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+					<tr class="summert">
+					<td class="first">Rose of Tralee</td>
+					<td>17 - 21 August 2012</td>
+					<td><a class="details" href="http://roseoftralee.ie/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+
+				</table>
+			</div>
+
+			<div>
+			<p class="eventstitle" id="autumnevents">Autumn</p>
+				<table class="event-table">
+					<tr class="autumnt">
+					<td class="first">Dublin Theatre Festival</td>
+					<td>27 September - <br/>14 October 2012</td>
+					<td><a class="details" href="http://www.dublintheatrefestival.com/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+					<tr class="autumnt">
+					<td class="first">Guinness Jazz Festival</td>
+					<td>26 - 29 October 2012</td>
+					<td><a class="details" href="http://www.guinnessjazzfestival.com/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div>
+			<p class="eventstitle" id="winterevents">Winter</p>
+				<table class="event-table">
+					<tr class="wintert">
+					<td class="first">Shannonside Winter Music Weekend</td>
+					<td>17 - 20 January 2013</td>
+					<td><a class="details" href="http://www.wmw.ie/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+					</tr>
+					<tr class="wintert">
+					<td class="first">Jameson Dublin International Film Festival</td>
+					<td>February 2013</td>
+					<td><a class="details" href="http://www.jdiff.com/" onclick="OpenPopup(this.href); return false">Event Details</a></td>
+			</tr>
+				</table>
+			</div>
+
+		</div>
+
+				<div class="halfcolumn">
+<!--Travel information part-->
+			<div id='Tabs'>
+				<p class="halfcoltext">Getting Around Ireland</p>
+				<p>Travelling around Ireland is short, simple and sweet or maddeningly long and
+				infuriatingly complicated. Distances are relatively short and there’s a good network of roads,
+				but public transportation can be infrequent, expensive or both and especially with trains
+				not reach many of the more interesting places. Below you will find a short info
+				about transport in Ireland<br/><br/></p>
+				<ul>
+					<li id='li_tab1' onclick="selecttab('tab1')" class="active"><a>Bus</a></li>
+					<li id='li_tab2' onclick="selecttab('tab2')"><a>Train</a></li>
+					<li id='li_tab3' onclick="selecttab('tab3')"><a>Road</a></li>
+					<li id='li_tab4' onclick="selecttab('tab4')"><a>Plane</a></li>
+				</ul>
+				<div id='Content_Area-info'>
+					<div id='tab1'>
+						<p>
+						<b>Bus Éireann</b> (01-836 6111; <a href="http://www.buseireann.ie" onclick="OpenPopup(this.href); return false">
+						www.buseireann.ie</a>; Busáras, Store St, Dublin) is the Republic’s
+						bus line and offers an extensive network throughout the south. Private buses compete –
+						often very favourably – with Bus Éireann in the Republic and also run where the national
+						buses are irregular or absent.<br/>
+						The larger bus companies will usually carry bikes for free but you should always check
+						in advance to avoid surprises.<br/>
+						<b>Ulster­bus</b> (028-9066 6600; <a href="http://www.ulsterbus.co.uk" onclick="OpenPopup(this.href); return false">
+						www.ulsterbus.co.uk</a>; Milewater Rd, Belfast) is the only bus
+						service in Northern Ireland.<br/><br/>
+						<b>Costs</b><br/>
+						Bus travel is much cheaper than train travel,
+						and private buses often charge less than Bus Éireann. Generally, return fares cost
+						little more than a one-way fare.
+						</p>
+
+						</div>
+					<!--The following 3 tabs are initially not displayed until they are clicked on-->
+					<div id='tab2' style='display: none;'>
+						<p>
+						<b>Iarnród Éireann</b> (Irish Rail; 01-836 2222;
+						<a href="http://www.irishrail.ie" onclick="OpenPopup(this.href); return false">
+						www.irishrail.ie</a>; 35 Lower Abbey St, Dublin)
+						operates trains in the Republic on routes that fan out from Dublin.
+						The system is limited though: there’s no north-south route along the western coast,
+						no network in Donegal, and no direct connections from Waterford to Cork or Killarney.<br/>
+						<b>Northern Ireland Railways</b> (NIR; 028-9089 9411; Belfast Central Station)
+						runs four routes from Belfast. One links with the system in the Republic via
+						Newry to Dublin; the other three go east to Bangor, northeast to Larne and northwest
+						to Derry via Coleraine.<br/><br/>
+						<b>Costs</b><br/>
+						Train travel is more expensive than bus travel and one-way fares are particularly
+						poor value : a midweek return ticket is often about the same as a one-way fare.
+						First-class tickets cost around 5euro to 10euro more than the standard fare for a single journey.
+						</p>
+						</div>
+
+					<div id='tab3' style='display: none;'>
+						<p>
+						Ireland’s new-found affluence means there are far more cars on the road,
+						and the building of new roads and the upgrading of existing ones just cannot keep pace.
+						Be prepared for delays, especially at holiday weekends. <b>AA Roadwatch</b>
+						(1550 131 811; <a href="http://www.aaroadwatch.ie" onclick="OpenPopup(this.href); return false">
+						www.aaroadwatch.ie</a>) provides traffic information in the Republic.<br/>
+						In the Republic, speed-limit and distance signs are in kilometres;
+						in the North, speed-limit and distance signs are in miles.<br/>
+						You’ll need a good road map and sense of humour to deal with the severe lack of
+						signposts in the Republic, and on minor roads be prepared for lots of potholes.<br/>
+						Petrol is considerably cheaper in the Republic than in the North.<br/>
+						Most service stations accept payment by credit card, but some small, remote ones may take cash only.
+						All cars on public roads must be insured. If you are bringing your own vehicle in to the country,
+						check that your insurance will cover you in Ireland.<br/><br/>
+
+						<b>Hire</b><br/>
+
+						Car hire in Ireland is expensive, so you’re often better off making arrangements in your
+						home country with some sort of package deal. In July and August it’s wise to book well ahead.
+						Most cars are manual; automatic cars are available but they’re more expensive to hire.
+						The international hire companies and the major local operators have offices all over Ireland.
+						Nova Car Hire (<a href="http://www.rentacar-ireland.com" onclick="OpenPopup(this.href); return false">
+						www.rentacar-ireland.com</a>) acts as an agent for Alamo, Budget, European
+						and National, and offers greatly discounted rates. In the Republic typical weekly
+						high-season hire rates with Nova are around €150 for a small car, €185 for a medium-sized car,
+						and €320 for a five-seater people carrier. In the North, similar cars are marginally more ­expensive.
+						When hiring a car be sure to check if the price includes collision-damage waiver
+						(CDW), insurance (eg for car theft and windscreen damage), value-added tax (VAT)
+						and unlimited mileage.<br/>
+						If you’re travelling from the Republic into Northern Ireland it’s important to be
+						sure that your insurance covers journeys to the North. People aged under 21 aren’t
+						allowed to hire a car; for the majority of hire companies you have to be aged at
+						least 23 and have had a valid driving licence for a minimum of one year.
+						Some companies in the Republic won’t rent to you if you’re aged 74 or over;
+						there’s no upper age limit in the North.
+						</p>
+
+					</div>
+
+					<div id='tab4' style='display: none;'>
+						<p>
+						<b>Airlines in Ireland</b><br/>
+						Ireland’s size makes domestic flying unnecessary unless you’re in a hurry,
+						but there are flights between Dublin and Belfast, Cork, Derry, Donegal, Galway, Kerry,
+						Shannon and Sligo, as well as a Belfast-Cork service. Most flights within Ireland
+						take around 30 to 50 minutes.<br/><br/>
+
+						The only domestic carriers are:<br/>
+						<b>Aer Árann</b> (1890-462 726, in Dublin 01-814 5240, in Galway 091-593 034,
+						in Cork 021-814 1058;<a href="http://www.aerarann.ie" onclick="OpenPopup(this.href); return false">
+						www.aerarann.ie</a>)
+						Operates flights from Dublin to Belfast, Cork, Derry, Donegal,
+						Galway, Kerry, Knock and Sligo; flights to the Aran Islands from Galway and a
+						Belfast to Cork route.<br/>
+						<b>Aer Lingus</b> (information and bookings 01-886 8844, flight information 01-705 6705,
+						in Belfast 028-9442 2888; <a href="http://www.aerlingus.ie" onclick="OpenPopup(this.href); return false">
+						www.aerlingus.ie</a>)
+						The main domestic airline.
+						</p>
+
+					</div>
+				</div> <!-- End of Content_Area Div -->
+			</div> <!-- End of Tabs Div-->
+		</div>
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+window.onload = initInfo();
+</script>
+
+
+
+</body>
+
+</html>

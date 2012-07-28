@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Web Design Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+
+	<!-- Link to jquery files-->
+	<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+</head>
+
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="nav">
+			<ul>
+				<li><a href ="index.html">Home</a></li>
+				<li id="selected"><a href ="spring.html">Spring</a></li>
+				<li><a href ="summer.html">Summer</a></li>
+				<li><a href ="autumn.html">Autumn</a></li>
+				<li><a href ="winter.html">Winter</a></li>
+				<li><a href ="info.html">Contact Us and Travel Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="seasons-backgr">
+				<img id ="seasons-backgr-img" src="images/christchurch_banner.jpg" alt="Christchurch image" />
+				<div class="logobackground"> <!--logo is on top of an opaque backgorund-->
+				</div>
+				<img class ="logotext-img" src="images/logo.png" alt = "celtic logo" />
+				<p class="logotext">IRELAND IN FOUR SEASONS</p>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="sidebar">
+			<p class="sidebar_title"> Locations On The Map:</p>
+			<div id="map"></div>
+			<div style ="height:20px"></div>
+
+			<!-- div for holding the accordion tabs and the hidden text they display on mouse over-->
+			<div id="accordion_menu">
+				<p class= "sidebar_title"> Other Seasons At A Glance: </p>
+					 	<div id="accordion">
+
+					 		<!--The 'Spring' pane is not displayed on this page-->
+					 		<h2 style='display:none'>Spring</h2>
+					 		<div class="pane" style="display:none">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li1">
+					 			<a href="spring.html">
+								Blarney Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li2">
+								<a href="spring.html">
+								Cruising on the Shannon
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li3">
+					 			<a href="spring.html">
+								National Heritage Park
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li4">
+								<a href="spring.html">
+								Christ Church Cathedral
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+
+					 		<h2 class="current">Summer</h2>
+					 		<div class="pane" style="display:block">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li5">
+					 			<a href="summer.html">
+								Cliffs of Moher
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li6">
+								<a href="summer.html">
+								The Burren
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li7">
+					 			<a href="summer.html">
+								Benbulben
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li8">
+								<a href="summer.html">
+								Aran Islands
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Autumn</h2>
+							<div class="pane">
+								<ul>
+								<li class="acc_tabs" id="accordion_li9">
+								<a href="autumn.html">
+								Powerscourt House
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li10">
+								<a href="autumn.html">
+								Clonmacnoise
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li11">
+								<a href="autumn.html">
+								Glendalough
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li12">
+								<a href="autumn.html">
+								Trinity College
+								</a>
+								</li>
+								</ul>
+					 		</div>
+
+					 		<h2>Winter</h2>
+					 		<div class="pane">
+					 			<ul>
+					 			<li class="acc_tabs" id="accordion_li13">
+					 			<a href="winter.html">
+								Bunratty Castle
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li14">
+								<a href="winter.html">
+								Guinness Brewery
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li15">
+					 			<a href="winter.html">
+								Newgrange
+								</a>
+								</li>
+								<li class="acc_tabs" id="accordion_li16">
+								<a href="winter.html">
+								Titanic Exhibition
+								</a>
+								</li>
+								</ul>
+					 		</div>
+					 	</div> <!-- End of accordion tabs Div -->
+
+						<!--The following background and text are hidden until a mouseover event from the accordion_li items-->
+						<div id="hidden_background" style="display:none;">
+						</div><!-- End of hidden_background Div -->
+
+						<div id="hiddentext" style="display:none;">
+							<div id="hiddenHdr" > </div>
+							<img  src="images/thumbnails/blarney_castle.jpg" id ="hiddenImg" alt = "blarney castle image"/>
+							<p id="hiddenInfo"> </p>
+						</div> <!-- End of hidden text Div -->
+			</div> <!-- End of accordion menu Div -->
+
+			<p class= "sidebar_title"> Local Tourist Offices: </p>
+			<div class ="info_section">
+				<div class="info">
+					<h4>Blarney Castle:</h4>
+					<p>Blarney Castle Information Office</p>
+					<p>tel:(06)57081171, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>Shannon River:</h4>
+					<p>Shannon and Erne Waterways Centre</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+				<div class="info">
+					<h4>National Heritage Park:</h4>
+					<p>Wexford Tourist Office</p>
+					<p>tel:(07)19161201, email:info@info.com</p>
+				</div>
+					<div class="info">
+					<h4>Christ Church and Dublinia:</h4>
+					<p>Dublin Tourist Information</p>
+					<p>tel:(091) 537700, email:info@info.com</p>
+				</div>
+			</div>
+
+		</div> <!-- End of sidebar Div -->
+
+		<div class="maincol">
+			<div class="seasontext"> <span class="maincolheader"><img src="images/spring_icon.png" alt="green leaf icon"/>Ireland in Spring </span>
+				<p>Take advantage of this slightly quieter period to enjoy some of the highlights Ireland has to offer, without having to queue
+				during the summer crowds.<br/> Kiss the Blarney Stone, enjoy a peaceful cruise on the Shannon while it is not congested with boats,
+				take a historic trip to the National Heritage Park, and enjoy the beauty of Christ Church Cathedral and a visit to Dublinia viking display.
+				</p>
+			</div>
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/blarney_castle.jpg" alt="blarney castle picture" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"> <span class="maincolheader">Blarney Castle </span><br/><br/>
+				This historic castle is most famous for its stone, which has the traditional power of conferring eloquence on all who kiss it. The word
+				blarney was introduced into the English language by Queen Elizabeth I and is described as pleasant talk, intended to
+				deceive without offending. The stone is set in the wall below the battlements and to kiss it, one has to lean backwards, (grasping
+				an iron railing) from the parapet walk.<br/></p>
+				<a href="#" id="example-show" class="showLink"
+				onclick="showHide('example');return false;">See more.</a>
+				<div id="example" class="more">
+					<p>There are pleasant walks along the riverbanks where you can sit and contemplate the reflections of the castle. In springtime the
+					castle grounds are filled with thousands of bulbs and the "Belgian beds", full of hybrid azaleas are in full flower. In autumn the
+					whole place glows as the leaves turn red, amber and gold.<br/><br/>
+					The Rock Close is a mystical place where majestic yew and oak trees grow around an ancient druidic settlement. Follow the trail through giant Gunnera leaves
+					and bamboo and you will find such features as a dolmen, wishing steps and a witch's kitchen.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/blarney-castle-rock-close/74863" target="_blank">Link to Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example-hide" class="hideLink"
+					onclick="showHide('example');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/shannon.jpg" alt="The Shannon image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Cruising on The Shannon </span><br/><br/>
+				Emerald Star is one of Ireland's most prestigious boating holiday companies established for over 34 years, having over 200 cruisers offering a wide selection of craft,
+				ranging from intimate two berth, up to size ten berth boats. Locations of the three cruiser stations have been chosen so that you can experience different
+				types of cruising waters.Base stations are located at different places along the Shannon.
+				</p>
+				<a href="#" id="example2-show" class="showLink"
+				onclick="showHide('example2');return false;">See more.</a>
+				<div id="example2" class="more">
+					<p>You can go your own route and choose a pace that suits you. One Way holidays are also possible between Carrick and Belturbet or Portumna and Carrick.<br/>
+					All the villages where you stop have easily accessible landing stages which you can use free of charge.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Activities-Adventure/emerald-star-ltd/11348" target="_blank">Link to  Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example2-hide" class="hideLink"
+					onclick="showHide('example2');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/heritage_park.jpg" alt="the national heritage park image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">The National Heritage Park </span><br/><br/>
+				The National Heritage Park, in Ferrycarrig County Wexford, covers 35 acres, takes visitors through 9,000 years of Irish history. A trail featuring prehistoric campsites, ringforts, crannogs,
+				Viking houses and other historic landmarks awaits discovery. There are settlements indicative of all the different periods of Ireland's cultural history,
+				depicting man's first settlements in Ireland up to the arrival of the Normans in the 12th C. </p>
+				<a href="#" id="example3-show" class="showLink"
+				onclick="showHide('example3');return false;">See more.</a>
+				<div id="example3" class="more">
+					<p>Ringfort Reopens at the Irish National Heritage Park! The ringfort has been almost completely rebuilt, and surrounded with a massive timber rampart which required
+					the felling of some 400 Irish oaks. Inside, the two "old" buildings have been rethatched in different styles, one using a wheat straw and the other, reed.<br/><br/>
+					A new 180m trail also takes visitors deep into wet woodlands, winding between ancient trees and pools of water, to experience at first-hand what Ireland must have looked
+					like to our Stone Age ancestors.<br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/irish-national-heritage-park/591" target="_blank">Link to  Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example3-hide" class="hideLink"
+					onclick="showHide('example3');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+
+			<hr class="maincolhr"/>
+			<img class="maincolimg" src="images/christchurch.jpg" alt="Christchurch image" />
+			<div class="sectionShadow">
+				<p class="placeinfotext"><span class="maincolheader">Christ Church and Dublinia </span><br/><br/>
+				Christ Church Cathedral is Dublin's oldest building, a leading visitor attraction and a place of pilgrimage for almost 1,000 years. Renowned for its beauty, architecture and exquisite floor tiles,
+				it is home to the famous 12th Century crypt, one of the oldest and largest in Britain and Ireland.<br/>
+				Perfectly located in the heart of Medieval Dublin, it was founded in 1030 by Sitriuc, King of the Dublin Norsemen.
+				</p>
+				<a href="#" id="example4-show" class="showLink"
+				onclick="showHide('example4');return false;">See more.</a>
+				<div id="example4" class="more">
+					<p>Over the years, Christ Church has borne witness to many significant events including the crowning of Lambert Simnel as Edward VI in 1487. Today, it houses the important Treasures of Christ Church
+					which features manuscripts and ancient artifacts as well as a spectacular exhibition of original 16th Century costumes from the historical series 'The Tudors'.<br/><br/>
+					Designed by Emmy award winning designer Joan Bergin, the opulent costumes from the drama have travelled the world including a display in Macy's New York. <br/><br/>
+					<a class = "link" href = "http://www.discoverireland.ie/Arts-Culture-Heritage/christ-church-cathedral/31246" target="_blank">Link to  Discover Ireland website for more info</a><br/><br/>
+					</p>
+					<p><a href="#" id="example4-hide" class="hideLink"
+					onclick="showHide('example4');return false;">Hide this content.</a></p>
+				</div>
+			</div>
+		</div> <!-- End of maincol div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="gallery">
+			<p class="sidebar_title"> See More Pictures: </p>
+			<div id="main_pic" class="shadow">
+				<img id="image-1" src="images/blarney_castle.jpg" class="opaque" alt = "blarney castle"/>
+				<img id="image-2" src="images/gallery/blarney_castle2.jpg" alt = "blarney castle"/>
+				<img id="image-3" src="images/gallery/blarney_castle3.jpg" alt = "blarney castle" />
+				<img id="image-4" src="images/gallery/blarney_castle4.jpg" alt = "blarney castle"/>
+				<img id="image-5" src="images/shannon.jpg" alt = "shannon river"/>
+				<img id="image-6" src="images/gallery/shannon2.jpg" alt = "shannon river"/>
+				<img id="image-7" src="images/gallery/shannon3.jpg" alt = "shannon river"/>
+				<img id="image-8" src="images/gallery/shannon4.jpg" alt = "shannon river"/>
+				<img id="image-9" src="images/heritage_park.jpg" alt = "heritage park"/>
+				<img id="image-10" src="images/gallery/heritage_park2.jpg" alt = "heritage park"/>
+				<img id="image-11" src="images/gallery/heritage_park3.jpg" alt = "heritage park"/>
+				<img id="image-12" src="images/gallery/heritage_park4.jpg" alt = "heritage park"/>
+				<img id="image-13" src="images/christchurch.jpg" alt = "christchurch cathedral"/>
+				<img id="image-14" src="images/gallery/christchurch2.jpg" alt = "christchurch cathedral"/>
+				<img id="image-15" src="images/gallery/christchurch3.jpg" alt = "christchurch cathedral"/>
+				<img id="image-16" src="images/gallery/christchurch4.jpg" alt = "christchurch cathedral"/>
+			</div>
+			<p class="gallery_p">Blarney Castle</p>
+			<p class="thumbnails">
+				<span class="selected" id="for-image-1"><img src="images/blarney_castle.jpg" alt = "blarney castle"/></span>
+				<span id="for-image-2"><img src="images/gallery/blarney_castle2.jpg" alt = "blarney castle"/></span>
+				<span id="for-image-3"><img src="images/gallery/blarney_castle3.jpg" alt = "blarney castle"/></span>
+				<span id="for-image-4"><img src="images/gallery/blarney_castle4.jpg" alt = "blarney castle"/></span>
+			</p>
+			<p class="gallery_p">Cruising on The Shannon</p>
+			<p class="thumbnails">
+				<span id="for-image-5"><img src="images/shannon.jpg" alt = "shannon river"/></span>
+				<span id="for-image-6"><img src="images/gallery/shannon2.jpg" alt = "shannon river"/></span>
+				<span id="for-image-7"><img src="images/gallery/shannon3.jpg" alt = "shannon river"/></span>
+				<span id="for-image-8"><img src="images/gallery/shannon4.jpg" alt = "shannon river"/></span>
+			</p>
+			<p class="gallery_p">National Heritage Park</p>
+			<p class="thumbnails">
+			<span id="for-image-9"><img src="images/heritage_park.jpg" alt = "heritage park"/></span>
+			<span id="for-image-10"><img src="images/gallery/heritage_park2.jpg" alt = "heritage park"/></span>
+			<span id="for-image-11"><img src="images/gallery/heritage_park3.jpg" alt = "heritage park"/></span>
+			<span id="for-image-12"><img src="images/gallery/heritage_park4.jpg" alt = "heritage park"/></span>
+			</p>
+			<p class="gallery_p">Christchurch Cathedral</p>
+			<p class="thumbnails">
+			<span id="for-image-13"><img src="images/christchurch.jpg" alt = "christchurch cathedral"/></span>
+			<span id="for-image-14"><img src="images/gallery/christchurch2.jpg" alt = "christchurch cathedral"/></span>
+			<span id="for-image-15"><img src="images/gallery/christchurch3.jpg" alt = "christchurch cathedral"/></span>
+			<span id="for-image-16"><img src="images/gallery/christchurch4.jpg" alt = "christchurch cathedral"/></span>
+			</p>
+		</div><!-- End of gallery Div -->
+	</div><!-- End of row Div -->
+
+	<div class="row">
+		<div class="footer">
+			<p class="footer"> Web Design project written by Jennifer Cooper and Monika Czaja,
+			students of National College of Ireland in Dublin </p>
+		</div>
+	</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+window.onload = initSpring();
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
