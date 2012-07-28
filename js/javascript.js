@@ -1,4 +1,3 @@
-
 //function that is called when the Index window is loaded
 function initIndex(){
 
@@ -274,8 +273,18 @@ function show()  {
 	 	document.getElementById("hiddenImg").src = hiddenImageArray[index];
 	 	document.getElementById("hiddenInfo").innerHTML = hiddenTextArray[index];						
 
+	 	//display the hidden elements by setting the display to 'block'
+	 	//this does not display correctly in IE, so it remains hidden for IE browsers.
+	 	var isMSIE = /*@cc_on!@*/0;
+		
+		if (isMSIE) {
+		  // if browser is IE, do not display the hidden text and background
+	 	document.getElementById("hidden_background").style.display = 'hidden';
+		} else {
+		  // if browser is not IE, display the hidden text and background
 		document.getElementById("hiddentext").style.display = 'block';
-	 	document.getElementById("hidden_background").style.display = 'block';	 		
+	 	document.getElementById("hidden_background").style.display = 'block';
+		}		
 	}
 
 
