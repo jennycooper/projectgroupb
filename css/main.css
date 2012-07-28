@@ -19,7 +19,7 @@ background-repeat:repeat-x;
 margin-left:auto;
 margin-right:auto;
 width: 80%;
-max-width:1100px;
+max-width:1040px;
 min-width:950px;
 background-color: white;
 padding:10px;
@@ -209,7 +209,7 @@ margin-bottom: 15px;
 font-size: 24px;
 font-weight: bold;
 position: absolute;
-top: 22px;
+top: 20px;
 left: 80px;
 background: transparent;
 color: white;
@@ -575,7 +575,7 @@ background-color:#99cccc;
 }
 
 /* accordion pane */
-#accordion .pane { 
+#accordion .pane {
 display:none;   
 height:150px;   
 padding:0px;   
@@ -614,6 +614,7 @@ color: grey;
 }
 
 /* The following hidden background and text are to be displayed when called by a mouseover function*/
+
 #hidden_background {
 position: relative;
 right: 300px;
@@ -627,7 +628,7 @@ z-index: 1000;
 }
 
 
-#hiddentext {
+#hiddentext{
 position: relative;
 left: 10px;
 top: -260px;
@@ -655,6 +656,7 @@ width: 150px;
 /*css for section on links to tourist sites, using css3 transforms*/
 
 .info_section {
+
 height: auto;
 width: 230px;
 border: 10px solid #99bbee;
@@ -920,7 +922,8 @@ a.details:hover {
 /* Smaller screens */
 
 @media only screen and (max-width: 1040px) {
-
+	
+	// on smaller screens, change the font size and line height, except for in the gallery and accordion tabs sections
 	body {
 	font-size: 0.8em;
 	line-height: 1.5em;
@@ -931,5 +934,11 @@ a.details:hover {
 	line-height: 1em;
 	}
 	
+	.acc_tabs {
+	font-size: 1em;
+	line-height: 1em;
+	}
+	
 }
+
 
