@@ -615,9 +615,9 @@ color: grey;
 
 /* The following hidden background and text are to be displayed when called by a mouseover function*/
 #hidden_background {
-position: absolute;
-left:500px;
-height: 260px;
+position: relative;
+right: 300px;
+height: 270px;
 width: 300px;
 background-color: lightgrey;
 opacity: .95;
@@ -626,9 +626,12 @@ border:3px solid grey;
 z-index: 1000;
 }
 
-#hiddentext{
-position: absolute;
-left: 510px;
+
+#hiddentext {
+position: relative;
+left: 10px;
+top: -260px;
+height: 270px;
 width: 280px;
 padding: 5px;
 background: transparent;
