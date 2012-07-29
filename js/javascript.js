@@ -573,10 +573,12 @@ function validate(){
   				return false;
   					}
   					else{
-  					document.getElementById("infoForm1").submit();
-  					document.getElementById("infoForm1").reset();
+					setTimeout('clear_form()', 200);
+					return true;
   					}
  			 }	
+function clear_form() {
+document.getElementById("infoForm1").reset();}	
 
 
 
